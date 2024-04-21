@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="RDC-secondround.css">
+    
+</head>
+
+<body>
+    <div class="Landing-page" style="position: relative;" >
+        <div class="box">
+            <img src="image/大众点评.png" class="Landing-page-image">
+        </div>
+    <div class="box">
+        <input type="text" placeholder="用户名" class="username"><br>
+        <input type="password" placeholder="请输入密码" class="password"><br>
+        <div style="align-items: center;">
+            <input type="checkbox" class="checkbox">
+            我已阅读并同意《美团用户服务协议》、<br>《隐私协议》和《天翼账号认证服务协议》。
+        </div>
+        <input type="button" value="登录" class="login-button" onclick="login()">
+    </div>
+    <div></div></div>
+    <!-- 登录页面 -->
+
+    <div class="Official-page" >
+         <div class="header">
+            <div class="headertext" style="text-align: center;height: 50px;">
+                <span id="note">
+                    <input type="radio" id="noteRadio" name="options" onchange="radioChanged()" checked>
+                    <label for="noteRadio">笔记</label>
+                </span>
+                <span id="place">
+                    <input type="radio" id="placeRadio" name="options" onchange="radioChanged()">
+                    <label for="placeRadio">地点</label>
+                </span>
+            </div>
+               <!-- 搜索栏 -->
+            <div  class="search-lab" style="top: 6%;">
+                <span><img src="image/扫一扫.png" style="width: 30px;left: 10px;
+                top: 5px;
+                 margin-right: 10px;
+                position: relative;
+                "></span>
+                <input type="text" class="search-textarea"  onclick="entersearch()">
+                <input type="button" value="搜索" class="button" style="right: 0%;">
+            </div>
+               <!-- 搜索栏 -->
+                 
+                   <br><br>
+                   <div class="navigation-bar" >
+                       <span class="way" onclick="attention()">关注</span>
+                       <span class="way" onclick="recommendation()" style="font-weight: bold;font-size: larger;" >推荐</span>
+                       <span class="way" onclick="">附件</span>
+                       <span class="way" onclick="">上春山</span>
+                       <span class="way" onclick="">美食</span>
+                       <span class="way" onclick="">出行</span>
+                   </div>
+        </div>
+        <br><br><br>
+
+    <div class="recommendation" >
+    <div class="container" style="top: 100px;height: 1000px;">
+        <div class="article">
+            <div class="articleimage" id="article1">
+                <img src="" alt="">
+                <div class="article_title"></div>
+                <div class="author_name"></div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="articleimage" id="article2">
+                <img src="" alt="">
+                <div class="article_title"></div>
+                <div class="author_name"></div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="articleimage" id="article3">
+                <img src="" alt="">
+                <div class="article_title"></div>
+                <div class="author_name"></div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="articleimage" id="article4">
+                <img src="" alt="">
+                <div class="article_title"></div>
+                <div class="author_name"></div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="articleimage" id="article5">
+                <img src="" alt="">
+                <div class="article_title"></div>
+                <div class="author_name"></div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+        <div class="3"></div>
+        <div class="4"></div>
+        <div class="5"></div>
+         <div class="bottom-lab" style="z-index: 9999;">
+           <a class="headpage" onclick="headpage();headpageiconchange()" style="color: orange;" >首页</a> 
+           <a href="#" style="position:relative;left: 0%;top: 15%;display: none;" class="rocket" >
+            <img src="image/火箭.png" style="height: 30px;width: 30px;">
+           </a>
+           <a  onclick="vedio()" class="vedio"><span>视频</span> </a> 
+           <a  style="background-color: orange;border-radius: 10px;color: white;"><span>+发笔记</span> </a> 
+           <a ><span>消息</span> </a> 
+           <a  class="my" onclick="mypage()" ><span>我的</span> </a> 
+         </div>
+    </div>
+    <div class="search-page">
+        <div class="search-lab-2" style="top: 2%;">
+            <span>
+                <img src="image/返回.png" style="width: 30px;left: 10px;
+                        top: 5px;
+                        margin-right: 10px;
+                        position: relative;" onclick="returnOfficialPage()">
+            </span>
+            <input type="text" class="search-textarea-2" id="searchInput">
+            <input type="button" value="搜索" class="button" id="searchButton"
+             style="background-color: white;color: black;"  onclick="startsearch()">
+        </div>
+        <div style="top: 80px;position: relative;font-size: 20px;font-weight:600 ;">
+            历史搜索<img src="image/删除.png" style="height: 20px;position: absolute; left: 90%;" onclick="clearSearchHistory()"></img>
+            
+            <div class="container-2" id="searchHistory">
+                <!-- 搜索历史将显示在这里 -->
+            </div>            
+            搜索发现
+            <div class="container-2">
+                <div>222</div>
+                <div>222</div>
+                <div>222</div>
+                <div>222</div>
+                <div>222</div>
+            </div>
+        </div>
+    </div>
+    <div class="search-inside-page">
+        
+            <div class="search-lab-2" style="top: 2%;">
+                <span><img src="image/返回.png" style="width: 30px;left: 10px;
+                                        top: 5px;
+                                         margin-right: 10px;
+                                        position: relative;
+                                        " onclick="returnsearchpage()"></span>
+                <input type="text" class="search-textarea-3" >
+                <input type="button" value="搜索" class="button"
+                    style="background-color: white;color: black;">
+                    <div class="navigation-bar">
+                        <span class="way-2" style="font-weight: bold;font-size: larger;border-bottom-style:solid ;" onclick="">综合</span>
+                        <span class="way-2" onclick="">商户</span>
+                        <span class="way-2" onclick="">笔记</span>
+                        <span class="way-2" onclick="">团购</span>
+                        <span class="way-2" onclick="">外卖</span>
+                        <span class="way-2" onclick="">用户</span>
+                    </div>
+            </div>
+        <div class="zhonghe"></div>
+        <div class="shanghu"></div>
+        <div class="note-page" style="display: none;">
+            <div class="search-lab-2" style="top: 2%;">
+                <span><img src="image/返回.png" style="width: 30px;left: 10px;
+                                                            top: 5px;
+                                                             margin-right: 10px;
+                                                            position: relative;
+                                                            " onclick="returnOfficialPage()"></span>
+                <input type="text" class="search-textarea-2">
+                <input type="but ton" value="搜索" class="button" style="background-color: white;color: black;"
+                    onclick="startsearch()">
+        
+            </div>
+        </div>
+        <div class="tuangou"></div>
+        <div class="waimai"></div>
+        <div class="yonghu"></div>
+    </div>
+    <div class="mypage" style="display: none;height: 1000px; " >
+        <div class="header-2" style="top: 5%;position: relative;">
+            <img src="image/列表.png" alt="">
+            <div style="font-size: larger; border-style: solid; border-radius:10px; position: relative; 
+            top: -5px; left: 45%;height:30px ;width: 120px; display: inline;">
+                设置背景
+            </div>
+            <img src="image/客服.png"  style="left: 50%;position: relative; ">
+            <img src="image/设置.png"  style="left: 50%;position: relative; ">
+         </div>
+            <div class="Myinformation" style="top: 8%;position: relative;" >
+                <table class="homepage" >
+                    <tr>
+                        <td rowspan="2" style="width: 20%;"><img src="image/客服.png" width="30px"></td>
+                        <td>点击设置昵称</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: medium;font-weight:400;">添加简介让大家更好地认识你</td>
+                        <td>编辑资料</td>
+                    </tr>
+                </table>
+            </div>
+          
+        
+    </div>
+    
+</body>
+<script src="RDC-secondround.js"></script>
+<script src="search.js">  </script>
+<script src="notepage.js">  </script>
+<script src="navigation-bar.js"></script>
+<script src="bottom-lab.js"></script>
+<script src="mypage.js"></script>
+</html>
