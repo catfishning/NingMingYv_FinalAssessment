@@ -29,7 +29,6 @@ arr.splice(1, 0, 'pink', 'hotpink') // 在索引号是1的位置添加 pink  hot
 console.log(arr) // ['red', 'pink', 'hotpink', 'green', 'blue']
 ~~~
 
-# Web APIs - 第1天笔记
 
 > 了解 DOM 的结构并掌握其基本的操作，体验 DOM 的在开发中的作用
 
